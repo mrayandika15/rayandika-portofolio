@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
       position="fixed"
     >
       <Flex direction="column">
-        <Heading fontSize="xl" fontWeight="extrabold">
+        <Heading fontSize="2xl" fontWeight="extrabold">
           Rayandika
         </Heading>
         <Text fontSize="xs">Web Front End Developer</Text>

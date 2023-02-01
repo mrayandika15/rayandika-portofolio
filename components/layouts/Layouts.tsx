@@ -2,6 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import React from "react";
 import Footer from "../core/Footer";
 import Navbar from "../core/Navbar";
+import SideNav from "../core/SideNav";
 import { Socmed } from "../core/Socmed";
 
 type ILayouts = {
@@ -13,7 +14,8 @@ const Layouts: React.FC<ILayouts> = ({ children }) => {
     <>
       <Navbar />
       <Socmed />
-      <Flex pt="120px" pl="50px">
+      <SideNav />
+      <Flex pl="50px" pr="85px">
         {children}
       </Flex>
       <Footer />
