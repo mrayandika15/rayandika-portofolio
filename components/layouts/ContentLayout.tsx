@@ -3,12 +3,21 @@ import React from "react";
 
 type IContentLayout = {
   children: React.ReactNode;
-  props: any;
+  props?: any;
 };
 
 const ContentLayout: React.FC<IContentLayout> = ({ children, props }) => {
   return (
-    <Flex w="full" h="100vh" direction="column" {...props}>
+    <Flex
+      w="full"
+      className="section"
+      position="relative"
+      h="100vh"
+      direction="column"
+      scrollSnapAlign="start"
+      pt="100px"
+      {...props}
+    >
       {children}
     </Flex>
   );

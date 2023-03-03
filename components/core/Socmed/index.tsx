@@ -36,6 +36,7 @@ export const Socmed: React.FC = () => {
       align="center"
       py="50px"
       gap="35px"
+      zIndex="popover"
     >
       <IconContext.Provider
         value={{ style: { cursor: "pointer", fontSize: "19px" } }}
