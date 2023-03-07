@@ -11,7 +11,6 @@ const ContentLayout: React.FC<IContentLayout> = ({ children, props }) => {
     <Flex
       w="full"
       className="section"
-      position="relative"
       h="100vh"
       direction="column"
       scrollSnapAlign="start"

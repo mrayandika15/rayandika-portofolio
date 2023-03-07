@@ -2,38 +2,39 @@ type IDummyData = {
   name: string;
   image: string;
   desc: string;
+  id: number;
 };
 
 const DummyData: IDummyData[] = [
   {
+    id: 1,
     name: "IPMS",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, saepeodio quam dolorum totam enim nihil ea aliquid sed expedita.",
-    image:
-      "https://loremflickr.com/cache/resized/65535_52688291677_46efaebc84_h_1000_1000_nofilter.jpg",
+    image: "https://picsum.photos/id/1/200/300",
   },
   {
+    id: 2,
     name: "Banjaran",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, saepeodio quam dolorum totam enim nihil ea aliquid sed expedita.",
-    image:
-      "https://loremflickr.com/cache/resized/65535_52636628437_c4d0e84b71_h_1000_1000_nofilter.jpg",
+    image: "https://picsum.photos/id/2/200/300",
   },
   {
+    id: 3,
     name: "Pisodapur",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, saepeodio quam dolorum totam enim nihil ea aliquid sed expedita.",
-    image:
-      "https://loremflickr.com/cache/resized/65535_52461676408_2375b1bb2f_h_1000_1000_nofilter.jpg",
+    image: "https://picsum.photos/id/3/200/300",
   },
   {
+    id: 4,
     name: "Bapenda",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, saepeodio quam dolorum totam enim nihil ea aliquid sed expedita.",
-    image:
-      "https://loremflickr.com/cache/resized/65535_52214085447_ec2bf04bd7_h_1000_1000_nofilter.jpg",
+    image: "https://picsum.photos/id/4/200/300",
   },
   {
+    id: 5,
     name: "Braga",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, saepeodio quam dolorum totam enim nihil ea aliquid sed expedita.",
-    image:
-      "https://loremflickr.com/cache/resized/65535_52170635092_0408be96ba_k_1000_1000_nofilter.jpg",
+    image: "https://picsum.photos/id/5/200/300",
   },
 ];
 

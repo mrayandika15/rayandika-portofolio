@@ -6,16 +6,18 @@ import ListProject from "./ListProject";
 
 const ProjectSection: React.FC = () => {
   return (
-    <ContentLayout props={{ id: "project" }}>
-      <Flex h="100vh" direction="column" gap="25px">
-        <Header>Projects</Header>
+    <>
+      <ContentLayout props={{ id: "project" }}>
+        <Flex h="100vh" direction="column" gap="25px">
+          <Header>Projects</Header>
 
-        <ListProject />
-        <Flex w="full" justify="center">
-          <Button variant="outlined">View More</Button>
+          <ListProject />
+          <Flex w="full" justify="center">
+            <Button variant="outlined">View More</Button>
+          </Flex>
         </Flex>
-      </Flex>
-    </ContentLayout>
+      </ContentLayout>
+    </>
   );
 };
 

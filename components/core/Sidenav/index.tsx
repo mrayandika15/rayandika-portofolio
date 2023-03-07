@@ -34,7 +34,7 @@ const SideNav: React.FC<ISidenav> = ({ pageActive }) => {
       direction="column"
       justify="center"
       gap="120px"
-      zIndex="overlay"
+      zIndex="sticky"
     >
       <VerticalText isActive={pageActive === 0} href="#about">
         About

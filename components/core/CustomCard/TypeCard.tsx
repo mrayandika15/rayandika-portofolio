@@ -1,8 +1,8 @@
 type ITypeCard = {
-  bgImage: string;
-  title: string;
+  name: string;
+  image: string;
   desc: string;
-  isActive?: boolean;
+  id: number;
 };
 
 export default ITypeCard;
