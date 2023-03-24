@@ -18,13 +18,16 @@ import { useAppContext } from "../context/AppContext";
 import CustomModal from "../components/core/Modal/CustomModal";
 
 const Home: NextPage = () => {
-  const { selectedItem } = useAppContext();
+  const { selectedItem, setSelectedItem } = useAppContext();
 
   return (
     <>
       <Title title="Rayandika" />
 
-      <CustomModal selectedItem={selectedItem} />
+      <CustomModal
+        selectedItem={selectedItem}
+        onClose={() => setSelectedItem("")}
+      />
 
       <Layouts>
         <AboutSection />

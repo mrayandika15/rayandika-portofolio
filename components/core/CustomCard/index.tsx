@@ -2,14 +2,9 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
-import ITypeCard from "./TypeCard";
+import { ICustomCard } from "./CustomCard.type";
 
-type ICustomCard = {
-  selectedItem: ITypeCard;
-  onClick: () => any;
-};
-
-const CustomCard: React.FC<ICustomCard> = ({ selectedItem, onClick }) => {
+const CustomCard: React.FC<ICustomCard> = ({ selectedItem, onOpen }) => {
   return (
     <AnimatePresence>
       <Box
@@ -24,7 +19,7 @@ const CustomCard: React.FC<ICustomCard> = ({ selectedItem, onClick }) => {
         backgroundSize="cover"
         layoutId={`layout-${selectedItem.id}`}
         as={motion.div}
-        onClick={onClick}
+        onClick={onOpen}
       >
         <Box
           position="absolute"

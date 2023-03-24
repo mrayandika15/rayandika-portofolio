@@ -13,8 +13,9 @@ const ContentLayout: React.FC<IContentLayout> = ({ children, props }) => {
       className="section"
       h="100vh"
       direction="column"
-      scrollSnapAlign="start"
       pt="100px"
+      pl="50px"
+      pr="85px"
       {...props}
     >
       {children}

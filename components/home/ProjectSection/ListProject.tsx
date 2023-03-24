@@ -1,11 +1,13 @@
 import { Flex } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { useAppContext } from "../../../context/AppContext";
 import CustomCard from "../../core/CustomCard";
+import CustomModal from "../../core/Modal/CustomModal";
 import DummyData from "./DummyData";
+import { ProjectState } from "./Project.type";
 
 const ListProject: React.FC = () => {
-  const { setSelectedItem, selectedItem } = useAppContext();
+  const { setSelectedItem } = useAppContext();
 
   return (
     <Flex gap="10px">
@@ -14,7 +16,7 @@ const ListProject: React.FC = () => {
           <CustomCard
             key={index}
             selectedItem={item}
-            onClick={() => setSelectedItem(item)}
+            onOpen={() => setSelectedItem(item)}
           ></CustomCard>
         );
       })}
