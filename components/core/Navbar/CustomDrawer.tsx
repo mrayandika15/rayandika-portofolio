@@ -79,8 +79,13 @@ const CustomDrawer: React.FC<INavbar> = ({ fullPageScroll }) => {
             })}
 
             <Flex fontSize="2xl" gap="10px">
-              {SocialMediaIcon.map((item) => {
-                return <item.icon />;
+              {SocialMediaIcon.map((item, key) => {
+                return (
+                  <item.icon
+                    key={`socmed-${key}`}
+                    onClick={() => window.open(item.link, "_blank")}
+                  />
+                );
               })}
             </Flex>
           </Flex>

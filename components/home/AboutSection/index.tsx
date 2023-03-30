@@ -61,6 +61,7 @@ const AboutSection: React.FC = () => {
           zIndex="hide"
           order={["1", "2"]}
           position={["absolute", "relative"]}
+          alt="profile-image"
         />
 
         <Box

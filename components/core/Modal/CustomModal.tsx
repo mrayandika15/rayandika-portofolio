@@ -29,7 +29,7 @@ const CustomModal: React.FC<IModal> = ({ selectedItem, onClose }) => {
   const handleNext = React.useCallback(() => {
     if (hasImages)
       setImageIndex((prevState: any) => {
-        if (prevState < images.length - 1) {
+        if (prevState < images?.length - 1) {
           return prevState + 1;
         }
 
@@ -43,7 +43,7 @@ const CustomModal: React.FC<IModal> = ({ selectedItem, onClose }) => {
         if (prevState > 0) {
           return prevState - 1;
         }
-        return images.length - 1;
+        return images?.length - 1;
       });
   }, [imageIndex, hasImages]);
 

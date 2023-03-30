@@ -9,7 +9,7 @@ export type ICustomDrawerData = {
 export type ISocialMediaIcon = {
   name: string;
   icon: any;
-  link: "";
+  link: string;
 };
 
 export const CustomDrawerData: ICustomDrawerData[] = [
@@ -32,16 +32,16 @@ export const SocialMediaIcon: ISocialMediaIcon[] = [
   {
     name: "Github",
     icon: VscGithub,
-    link: "",
+    link: "https://github.com/mrayandika15",
   },
   {
     name: "Instagram",
     icon: BsInstagram,
-    link: "",
+    link: "https://www.instagram.com/mrayandikaa/",
   },
   {
     name: "Whatsapp",
     icon: BsWhatsapp,
-    link: "",
+    link: "https://api.whatsapp.com/send?phone=6285156413628",
   },
 ];

@@ -27,9 +27,10 @@ const Projects: React.FC = () => {
           <Header>Projects</Header>
 
           <Flex flexWrap="wrap" gap="15px" w="full">
-            {data.map((item: any) => {
+            {data.map((item: any, index) => {
               return (
                 <CustomCard
+                  key={`card-large${index}`}
                   size="large"
                   selectedItem={item}
                   onOpen={() => setSelectedItem(item)}
