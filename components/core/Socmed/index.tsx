@@ -8,10 +8,11 @@ import { IconContext } from "react-icons/lib";
 type ICustomTooltip = {
   children: React.ReactNode;
   label: string;
+  link: string;
 };
 
 export const Socmed: React.FC = () => {
-  const CustomTooltip = ({ children, label }: ICustomTooltip) => {
+  const CustomTooltip = ({ children, label, link }: ICustomTooltip) => {
     return (
       <Tooltip
         label={label}
@@ -20,8 +21,9 @@ export const Socmed: React.FC = () => {
         bg="white"
         fontSize="sm"
         fontWeight="bold"
+        color="black"
       >
-        <span>{children}</span>
+        <span onClick={() => window.open(link, "_blank")}>{children}</span>
       </Tooltip>
     );
   };
@@ -37,19 +39,26 @@ export const Socmed: React.FC = () => {
       py="50px"
       gap="35px"
       zIndex="sticky"
+      display={["none", "flex"]}
     >
       <IconContext.Provider
         value={{ style: { cursor: "pointer", fontSize: "19px" } }}
       >
-        <CustomTooltip label="Github">
+        <CustomTooltip label="Github" link="https://github.com/mrayandika15">
           <VscGithub />
         </CustomTooltip>
 
-        <CustomTooltip label="Instagram">
+        <CustomTooltip
+          label="Instagram"
+          link="https://www.instagram.com/mrayandikaa/"
+        >
           <BsInstagram />
         </CustomTooltip>
 
-        <CustomTooltip label="Whatsapp">
+        <CustomTooltip
+          label="Whatsapp"
+          link="https://api.whatsapp.com/send?phone=6285156413628"
+        >
           <BsWhatsapp />
         </CustomTooltip>
       </IconContext.Provider>

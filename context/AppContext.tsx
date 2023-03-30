@@ -10,6 +10,8 @@ type AppState = {
 type AppType = {
   selectedItem?: AppState | string;
   setSelectedItem?: any;
+  pageActive?: number;
+  setPageActive?: any;
   children?: React.ReactNode;
 };
 
@@ -17,9 +19,12 @@ const AppConsumerContext = createContext<AppType | null>(null);
 
 const AppContext: React.FC<AppType> = ({ children }) => {
   const [selectedItem, setSelectedItem] = React.useState<AppState | string>("");
+  const [pageActive, setPageActive] = React.useState<number>(0);
 
   return (
-    <AppConsumerContext.Provider value={{ selectedItem, setSelectedItem }}>
+    <AppConsumerContext.Provider
+      value={{ selectedItem, setSelectedItem, pageActive, setPageActive }}
+    >
       {children}
     </AppConsumerContext.Provider>
   );

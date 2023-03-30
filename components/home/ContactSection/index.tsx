@@ -6,15 +6,15 @@ import ContentLayout from "../../layouts/ContentLayout";
 
 const ContactSection: React.FC = () => {
   return (
-    <ContentLayout props={{ id: "contact" }}>
-      <Flex h="100vh" direction="column" gap="15px">
+    <ContentLayout>
+      <Flex w="full" h="full" direction="column" gap="15px">
         <Header>Contact</Header>
-        <Text>
+        <Text fontSize={["xs", "lg"]}>
           Interested ? Drop me a line if you want to work together on something
           exciting. Big or smal
         </Text>
 
-        <Flex direction="column" gap="25px" w="550px">
+        <Flex direction="column" gap={["10px", "25px"]} w={["full", "550px"]}>
           <CustomInput label="Name" placeholder="What's your name ?" />
           <CustomInput
             label="Email"

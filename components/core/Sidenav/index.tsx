@@ -1,26 +1,29 @@
 import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
+import { useAppContext } from "../../../context/AppContext";
 
 type IVerticalText = {
   children: React.ReactNode;
-  href: string;
+  onClick: any;
   isActive?: boolean;
 };
 
-type ISidenav = {
-  pageActive?: number;
-};
+const SideNav: React.FC = () => {
+  const { pageActive, setPageActive } = useAppContext();
 
-const SideNav: React.FC<ISidenav> = ({ pageActive }) => {
   const VerticalText = ({
     children,
-    href,
+    onClick,
     isActive = false,
   }: IVerticalText) => {
     return (
-      <Text transform="rotate(90deg)" fontWeight={isActive ? "bold" : "normal"}>
-        <a href={href}>{children}</a>
+      <Text
+        transform="rotate(90deg)"
+        fontWeight={isActive ? "bold" : "normal"}
+        cursor="pointer"
+      >
+        <a onClick={onClick}>{children}</a>
       </Text>
     );
   };
@@ -35,14 +38,24 @@ const SideNav: React.FC<ISidenav> = ({ pageActive }) => {
       justify="center"
       gap="120px"
       zIndex="sticky"
+      display={["none", "flex"]}
     >
-      <VerticalText isActive={pageActive === 0} href="#about">
+      <VerticalText
+        isActive={pageActive === 0}
+        onClick={() => setPageActive(0)}
+      >
         About
       </VerticalText>
-      <VerticalText isActive={pageActive === 1} href="#project">
+      <VerticalText
+        isActive={pageActive === 1}
+        onClick={() => setPageActive(1)}
+      >
         Projects
       </VerticalText>
-      <VerticalText isActive={pageActive === 2} href="#contact">
+      <VerticalText
+        isActive={pageActive === 2}
+        onClick={() => setPageActive(2)}
+      >
         Contact
       </VerticalText>
     </Flex>

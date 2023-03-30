@@ -8,4 +8,5 @@ export type ITypeCard = {
 export type ICustomCard = {
   selectedItem: ITypeCard;
   onOpen: () => any;
+  size?: "base" | "large";
 };

@@ -34,3 +34,17 @@
     top: 30px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .mouse {
+    width: 25px;
+    height: 45px;
+    border: 1px solid white;
+  }
+
+  .mouse::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+  }
+}
