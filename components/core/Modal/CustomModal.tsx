@@ -15,7 +15,7 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { IProjects } from "../../../pages/api/projects/projects.type";
 
 type IModal = {
-  selectedItem: IProjects | any;
+  selectedItem: any;
   onClose: () => any;
 };
 
