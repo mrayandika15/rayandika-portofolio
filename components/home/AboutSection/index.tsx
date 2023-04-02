@@ -24,7 +24,7 @@ const AboutSection: React.FC = () => {
         <Flex
           direction="column"
           gap="15px"
-          w={["full", "50%"]}
+          w={["full", "45%"]}
           order={["2", "1"]}
         >
           <Flex direction="column">
@@ -34,7 +34,7 @@ const AboutSection: React.FC = () => {
             </Heading>
           </Flex>
           <Box w="80px" h="3px" bg="white"></Box>
-          <Text w="full" textAlign="justify" fontSize={["xs", "lg"]}>
+          <Text w="full" fontSize={["xs", "lg"]}>
             Hello, I’m Muhammad Rayandika Putra Arestya Antaatmaja. I’m a
             Frontend Website Developer and Programmer with 4 years of
             experiences. Please kindly contact me if you’re interested with my

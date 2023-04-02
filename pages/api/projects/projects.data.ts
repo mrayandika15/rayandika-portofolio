@@ -12,6 +12,7 @@ export const ProjectsData: IProjects[] = [
       "assets/projects/ipms/3.png",
       "assets/projects/ipms/4.png",
     ],
+    link: "https://ipms.co.id/",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const ProjectsData: IProjects[] = [
       "./assets/projects/ptmain/1.png",
       "./assets/projects/ptmain/2.png",
     ],
+    link: "https://pt-main-client.vercel.app/",
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ export const ProjectsData: IProjects[] = [
       "./assets/projects/pisodapur/7.png",
       "./assets/projects/pisodapur/8.png",
     ],
+    link: "disabled",
   },
   {
     id: 4,
@@ -49,6 +52,7 @@ export const ProjectsData: IProjects[] = [
       "./assets/projects/dsda/2.png",
       "./assets/projects/dsda/3.png",
     ],
+    link: "disabled",
   },
   {
     id: 5,
@@ -59,6 +63,7 @@ export const ProjectsData: IProjects[] = [
       "./assets/projects/bumiselatan/1.png",
       "./assets/projects/bumiselatan/2.png",
     ],
+    link: "https://bumiselatan.com/",
   },
   {
     id: 6,
@@ -70,6 +75,7 @@ export const ProjectsData: IProjects[] = [
       "./assets/projects/daramas/2.png",
       "./assets/projects/daramas/3.png",
     ],
+    link: "https://company-profile-dara.vercel.app/",
   },
   {
     id: 7,
@@ -81,6 +87,7 @@ export const ProjectsData: IProjects[] = [
       "./assets/projects/sgi/2.png",
       "./assets/projects/sgi/3.png",
     ],
+    link: "https://satuglobalinvestama.com/",
   },
   {
     id: 8,
@@ -90,6 +97,7 @@ export const ProjectsData: IProjects[] = [
       "./assets/projects/sixmavs/1.png",
       "./assets/projects/sixmavs/2.png",
     ],
+    link: "https://six-maverick-website.vercel.app/",
   },
   {
     id: 9,
@@ -100,5 +108,6 @@ export const ProjectsData: IProjects[] = [
       "./assets/projects/cvcmp/1.png",
       "./assets/projects/cvcmp/2.png",
     ],
+    link: "https://cvcmp.vercel.app/",
   },
 ];

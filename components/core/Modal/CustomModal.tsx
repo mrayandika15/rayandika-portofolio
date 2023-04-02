@@ -12,9 +12,10 @@ import { motion } from "framer-motion";
 import React from "react";
 import { IconContext } from "react-icons";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { IProjects } from "../../../pages/api/projects/projects.type";
 
 type IModal = {
-  selectedItem: any;
+  selectedItem: IProjects;
   onClose: () => any;
 };
 
@@ -25,6 +26,19 @@ const CustomModal: React.FC<IModal> = ({ selectedItem, onClose }) => {
   const hasImages = selectedItem?.image?.length > 0 ? true : false;
 
   const images = selectedItem.image;
+
+  React.useEffect(() => {
+    if (imageIndex === images?.length) setImageIndex(0);
+
+    if (imageIndex < 0) setImageIndex(images?.length);
+
+    const timer = setTimeout(
+      () => setImageIndex((prevState) => prevState + 1),
+      6e3
+    );
+
+    return () => clearTimeout(timer);
+  }, [imageIndex]);
 
   const handleNext = React.useCallback(() => {
     if (hasImages)
@@ -63,7 +77,10 @@ const CustomModal: React.FC<IModal> = ({ selectedItem, onClose }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 1 } }}
-        onClick={() => onClose()}
+        onClick={() => {
+          setImageIndex(0);
+          onClose();
+        }}
       >
         <Box
           w={["full", "76vw"]}
@@ -137,7 +154,16 @@ const CustomModal: React.FC<IModal> = ({ selectedItem, onClose }) => {
             <Text fontSize="sm" w={["full", "600px"]}>
               {selectedItem.desc}
             </Text>
-            <Button variant="outlined" w="150px">
+            <Button
+              variant="outlined"
+              w="150px"
+              isDisabled={selectedItem.link === "disabled" ? true : false}
+              onClick={() => {
+                if (selectedItem.link !== "disabled") {
+                  window.open(selectedItem.link, "_blank");
+                }
+              }}
+            >
               View Page
             </Button>
           </Box>

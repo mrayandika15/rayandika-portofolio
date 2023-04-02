@@ -3,4 +3,5 @@ export type IProjects = {
   image: string[];
   desc: string;
   id: number;
+  link: string;
 };
