@@ -1,16 +1,12 @@
-
 # Rayandika Portofolio
 
-
+##TEST
 
 ## Tech Stack
 
 **Client:** NextJs, ChakraUI, Axios
 
 **Server:** Directus
-
-
-
 
 ## Run Locally
 
@@ -29,8 +25,8 @@ Go to the project directory
 Install dependencies
 
 ```bash
-// npm 
-  npm install 
+// npm
+  npm install
 // yarn
   yarn install
 ```
@@ -43,4 +39,3 @@ Start the server
 // yarn
   yarn run dev
 ```
-
